@@ -21,29 +21,21 @@ export const Sidebar = () => {
     <>
       <AnimatePresence>
         {open && (
-          <div className="">
-            {open && (
-              <div
-                onClick={() => setOpen(false)}
-                className="absolute lg:hidden w-full h-full right-0 left-0 top-0 bg-black z-[100] opacity-10"
-              />
-            )}
-            <motion.div
-              initial={{ x: isMobile() ? -400 : -200 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.2, ease: "linear" }}
-              exit={{ x: isMobile() ? -400 : -200 }}
-              className="px-6  z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit  fixed lg:relative  h-screen left-0 flex flex-col justify-between"
-            >
-              <div className="flex-1 overflow-auto">
-                <SidebarHeader />
-                <Navigation setOpen={setOpen} />
-              </div>
-              <div onClick={() => isMobile() && setOpen(false)}>
-                <Badge href="/resume" text="Read Resume" />
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ x: isMobile() ? -1000 : -300 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.2, ease: "linear" }}
+            exit={{ x: isMobile() ? -1000 : -300 }}
+            className="px-6  z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit  fixed lg:relative  h-screen left-0 flex flex-col justify-between"
+          >
+            <div className="flex-1 overflow-auto">
+              <SidebarHeader />
+              <Navigation setOpen={setOpen} />
+            </div>
+            <div onClick={() => isMobile() && setOpen(false)}>
+              <Badge href="/resume" text="Read Resume" />
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
       <button
