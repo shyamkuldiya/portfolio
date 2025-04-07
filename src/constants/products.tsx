@@ -90,7 +90,7 @@ export const products = [
     content: (
       <div>
         <p>
-          This project demonstrates the integration of Next.js with WIX's
+          This project demonstrates the integration of Next.js with WIX&apos;s
           headless e-commerce capabilities. It showcases how to build a
           responsive and dynamic online store using modern web technologies. The
           project emphasizes the flexibility and scalability of headless
