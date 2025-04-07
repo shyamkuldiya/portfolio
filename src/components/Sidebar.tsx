@@ -16,32 +16,41 @@ import { isMobile } from "@/lib/utils";
 export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
 
+  // write a function to get the window width?
   return (
     <>
       <AnimatePresence>
         {open && (
-          <motion.div
-            initial={{ x: -200 }}
-            animate={{ x: 0 }}
-            transition={{ duration: 0.2, ease: "linear" }}
-            exit={{ x: -200 }}
-            className="px-6  z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit  fixed lg:relative  h-screen left-0 flex flex-col justify-between"
-          >
-            <div className="flex-1 overflow-auto">
-              <SidebarHeader />
-              <Navigation setOpen={setOpen} />
-            </div>
-            <div onClick={() => isMobile() && setOpen(false)}>
-              <Badge href="/resume" text="Read Resume" />
-            </div>
-          </motion.div>
+          <div className="">
+            {open && (
+              <div
+                onClick={() => setOpen(false)}
+                className="absolute lg:hidden w-full h-full right-0 left-0 top-0 bg-black z-[100] opacity-10"
+              />
+            )}
+            <motion.div
+              initial={{ x: isMobile() ? -400 : -200 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.2, ease: "linear" }}
+              exit={{ x: isMobile() ? -400 : -200 }}
+              className="px-6  z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit  fixed lg:relative  h-screen left-0 flex flex-col justify-between"
+            >
+              <div className="flex-1 overflow-auto">
+                <SidebarHeader />
+                <Navigation setOpen={setOpen} />
+              </div>
+              <div onClick={() => isMobile() && setOpen(false)}>
+                <Badge href="/resume" text="Read Resume" />
+              </div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
       <button
-        className="fixed lg:hidden bottom-4 right-4 h-8 w-8 border border-neutral-200 rounded-full backdrop-blur-sm flex items-center justify-center z-50"
+        className="fixed lg:hidden bottom-4 right-4 h-8 w-8 border bg-blue-50  border-blue-200 rounded-full backdrop-blur-sm flex items-center justify-center z-50"
         onClick={() => setOpen(!open)}
       >
-        <IconLayoutSidebarRightCollapse className="h-4 w-4 text-secondary" />
+        <IconLayoutSidebarRightCollapse className="h-4 w-4 text-blue-500" />
       </button>
     </>
   );

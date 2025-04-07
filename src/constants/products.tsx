@@ -1,14 +1,11 @@
-import tapdata from "public/images/tapdata.png";
 import tradedons from "public/images/tradedons.png";
 import tradedons2 from "public/images/tradedons2.png";
 import villeos from "public/images/villeos.png";
-import sidefolioAceternity2 from "public/images/sidefolio-aceternity-2.png";
-import sidefolioAlgochurn from "public/images/sidefolio-algochurn.png";
-import sidefolioAlgochurn2 from "public/images/sidefolio-algochurn.png";
-import sidefolioMoonbeam from "public/images/sidefolio-moonbeam.png";
-import sidefolioMoonbeam2 from "public/images/sidefolio-moonbeam-2.png";
-import sidefolioTailwindMasterKit from "public/images/sidefolio-tailwindmasterkit.png";
-import sidefolioTailwindMasterKit2 from "public/images/sidefolio-tailwindmasterkit-2.png";
+import tdf2 from "public/images/tdfx2.png";
+import tdfx from "public/images/tdfx.png";
+import wixEcom3 from "public/images/wix-com3.png";
+import wixEcom2 from "public/images/wix-ecom2.png";
+import wixEcom from "public/images/wix-ecom.png";
 
 export const products = [
   {
@@ -48,7 +45,7 @@ export const products = [
     thumbnail: villeos,
     images: [villeos],
     stack: ["ReactJS", "MUI", "React Router"],
-    slug: "algochurn",
+    slug: "villeos",
     content: (
       <div>
         <p>
@@ -57,6 +54,47 @@ export const products = [
           interface for buying, selling, and managing properties. The platform
           provides tools for property listings, virtual tours, and secure
           transactions, ensuring a seamless experience for buyers and sellers.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: "https://www.tdfx.exchange/",
+    title: "TDFX Exchange",
+    description:
+      "An open community trading platform Traders and investors from all over the world can publish trading strategies and share their experiences and ideas in real",
+    thumbnail: tdfx,
+    images: [tdfx, tdf2],
+    stack: ["ReactJS", "Tailwindcss"],
+    slug: "tdfx",
+    content: (
+      <div>
+        <p>
+          TDFX is a NO-DEALING DESK (NDD) that tansmits client on central
+          clearing markets, who automated matching system instantly reconcile
+          trades to ensure that each client order is executed faitly without any
+          conflict of interest
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: "https://nextjs-wix-ecom.vercel.app/",
+    title: "NextJS + WIX Headless Store",
+    description:
+      "A headless e-commerce store built with Next.js and WIX, showcasing the power of modern web development.",
+    thumbnail: wixEcom3,
+    images: [wixEcom3, wixEcom, wixEcom2],
+    stack: ["NextJS", "Tailwindcss", "WIX Headless"],
+    slug: "wix-ecom",
+    content: (
+      <div>
+        <p>
+          This project demonstrates the integration of Next.js with WIX's
+          headless e-commerce capabilities. It showcases how to build a
+          responsive and dynamic online store using modern web technologies. The
+          project emphasizes the flexibility and scalability of headless
+          commerce, allowing for a seamless shopping experience across devices.
         </p>
       </div>
     ),
