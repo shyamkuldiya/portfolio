@@ -10,7 +10,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Shyam Choudhary - Developer",
   description:
-    "Shyam Choudhary is a frontend developer. He is a digital nomad and travels around the world while working remotely.",
+  "Shyam Choudhary is a frontend developer specilized in ReactJS, NextJs React Router Wix Headless Commerce and more.",
 };
 
 export default async function Blog() {

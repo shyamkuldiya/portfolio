@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: "Projects | John Doe",
       description:
-        "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+        "Shyam Choudhary is a frontend developer specilized in ReactJS, NextJs React Router Wix Headless Commerce and more.",
     };
   }
 }
